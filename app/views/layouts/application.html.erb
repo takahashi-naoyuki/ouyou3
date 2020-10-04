@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+ <div class="container">
+      <p id="notice"><%= notice %></p>
 <html>
   <head>
     <title>Bookers2-debug</title>
@@ -10,11 +12,11 @@
   </head>
 
   <body>
+
     <%= render 'layouts/header' %>
 
-    <div class="container">
-      <p id="notice"><%= notice %></p>
 
+     <%= yield %>
     </div>
     <% if flash[:notice] %>
     <div class="flash">
@@ -22,7 +24,7 @@
     </div>
     <% end %>
 
- <%= yield %>
+
     <%= render 'layouts/footer' %>
   </body>
 </html>
